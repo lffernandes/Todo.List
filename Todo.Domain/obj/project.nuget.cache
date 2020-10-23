@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "JNxh2YmdUwxb6mzjF2WSVBYWi8ojPWh37wAofjxdB13mOHkLM7gaxp3y1GW++HDBSSffB2jbsWauEGGF61w9Vg==",
+  "dgSpecHash": "qMD14Za7hECalrint8flUdkYCBBosknmTBHQXhklkigE9Gm4oUJSnB4mxNfZQ5qT4qmZHDVTuPmbVIVNplU6bg==",
   "success": true,
   "projectFilePath": "C:\\repos\\TodoList\\Todo.Domain\\Todo.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lzfrnds\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\Lzfrnds\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Lzfrnds\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
