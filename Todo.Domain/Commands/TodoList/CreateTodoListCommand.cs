@@ -4,17 +4,20 @@ using Flunt.Validations;
 using Todo.Domain.Commands.Contracts;
 
 
+
+
 namespace Todo.Domain.Commands
 {
-    public class CreateTodoCommand : Notifiable, ICommand
+    public class CreateTodoListCommand : Notifiable, ICommand
     {
-        public CreateTodoCommand() { }
+        public CreateTodoListCommand() { }
 
-        public CreateTodoCommand(string title, string user, DateTime date)
+        public CreateTodoListCommand(string title, string user, DateTime date)
         {
             Title = title;
             User = user;
             Date = date;
+
         }
         public string Title { get; set; }
 
@@ -22,12 +25,13 @@ namespace Todo.Domain.Commands
 
         public DateTime Date { get; set; }
 
+
         public void Validate()
         {
             AddNotifications(
                 new Contract()
                  .Requires()
-                 .HasMinLen(Title, 3, "Title", "Por favor, descreva melhor esta tarefa")
+                 .HasMinLen(Title, 3, "Title", "Por favor, descreva melhor sua lista")
                  .HasMinLen(User, 6, "User", "Usuário inválido")
 
             );

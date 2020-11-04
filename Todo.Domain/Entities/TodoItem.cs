@@ -1,35 +1,35 @@
 using System;
+using Todo.Domain.Helpers;
 
 namespace Todo.Domain.Entities
 {
     public class TodoItem : Entity
     {
-        public TodoItem(string title, string user, DateTime date)
+        public TodoItem(Guid listid, string title, string user, DateTime date)
         {
             Title = title;
-            Done = false;
+            Status = StatusItem.ToDo;
             Date = date;
             User = user;
+            ListId = listid;
+
         }
 
         public string Title { get; private set; }
 
-        public bool Done { get; private set; }
+        public StatusItem Status { get; private set; }
 
         public DateTime Date { get; private set; }
 
         public string User { get; private set; }
 
-        public void MarkAsDone()
-        {
-            Done = true;
-        }
+        public Guid ListId { get; private set; }
 
-        public void MarkAsUndone()
+        public void UpdateStatusItem(StatusItem status)
         {
-            Done = false;
-        }
+            Status = status;
 
+        }
         public void UpdateTitle(string title)
         {
             Title = title;
