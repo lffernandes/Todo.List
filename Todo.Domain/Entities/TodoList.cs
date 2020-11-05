@@ -1,7 +1,6 @@
 using System;
 using Todo.Domain.Helpers;
 
-
 namespace Todo.Domain.Entities
 {
     public class TodoList : Entity

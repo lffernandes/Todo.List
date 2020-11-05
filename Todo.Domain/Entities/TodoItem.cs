@@ -28,7 +28,6 @@ namespace Todo.Domain.Entities
         public void UpdateStatusItem(StatusItem status)
         {
             Status = status;
-
         }
         public void UpdateTitle(string title)
         {

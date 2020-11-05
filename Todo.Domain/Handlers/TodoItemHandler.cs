@@ -5,6 +5,7 @@ using Todo.Domain.Entities;
 using Todo.Domain.Handlers.Contracts;
 using Todo.Domain.Repositories;
 
+
 namespace Todo.Domain.Handlers
 {
     public class TodoItemHandler :
@@ -32,7 +33,5 @@ namespace Todo.Domain.Handlers
             return new GenericCommandResult(true, "Tarefa salva", todo);
 
         }
-
-
     }
 }
