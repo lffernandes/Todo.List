@@ -9,12 +9,12 @@ namespace Todo.Domain.Tests.CommandTests
     {
         private readonly CreateTodoItemCommand _invalidItemCommand = new CreateTodoItemCommand(Guid.NewGuid(), "", "", DateTime.Now);
 
-        private readonly CreateTodoItemCommand _ValidItemCommand = new CreateTodoItemCommand(Guid.NewGuid(), "Título da tarefa", "Lzfrnds", DateTime.Now);
+        private readonly CreateTodoItemCommand _validItemCommand = new CreateTodoItemCommand(Guid.NewGuid(), "Título da tarefa", "Lzfrnds", DateTime.Now);
 
         public CreateTodoItemCommandTests()
         {
             _invalidItemCommand.Validate();
-            _ValidItemCommand.Validate();
+            _validItemCommand.Validate();
         }
 
 
@@ -27,7 +27,7 @@ namespace Todo.Domain.Tests.CommandTests
         [TestMethod]
         public void Dado_um_comando_valido()
         {
-            Assert.AreEqual(_ValidItemCommand.Valid, true);
+            Assert.AreEqual(_validItemCommand.Valid, true);
         }
 
     }
