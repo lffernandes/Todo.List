@@ -12,12 +12,12 @@ namespace Todo.Domain.Commands
     {
         public CreateTodoItemCommand() { }
 
-        public CreateTodoItemCommand(Guid listid, string title, string user, DateTime date)
+        public CreateTodoItemCommand(Guid list, string title, string user, DateTime date)
         {
             Title = title;
             User = user;
             Date = date;
-            ListId = listid;
+            ListId = list;
         }
         public string Title { get; set; }
 
@@ -34,7 +34,7 @@ namespace Todo.Domain.Commands
                  .Requires()
                  .HasMinLen(Title, 3, "Title", "Por favor, descreva melhor esta tarefa")
                  .HasMinLen(User, 6, "User", "Usuário inválido")
-                 .IsEmpty(ListId, "ListId", "Lista inválida.")
+            //  .IsEmpty(ListId, "ListId", "Lista inválida.")
 
             );
         }

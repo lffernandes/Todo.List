@@ -92,3 +92,6 @@ C:\repos\TodoList\Todo.Domain.Tests\obj\Debug\netcoreapp3.1\Todo.Domain.Tests.cs
 C:\repos\TodoList\Todo.Domain.Tests\obj\Debug\netcoreapp3.1\Todo.Domain.Tests.dll
 C:\repos\TodoList\Todo.Domain.Tests\obj\Debug\netcoreapp3.1\Todo.Domain.Tests.pdb
 C:\repos\TodoList\Todo.Domain.Tests\obj\Debug\netcoreapp3.1\Todo.Domain.Tests.genruntimeconfig.cache
+C:\repos\TodoList\Todo.Domain.Tests\bin\Debug\netcoreapp3.1\Flunt.dll
+C:\repos\TodoList\Todo.Domain.Tests\bin\Debug\netcoreapp3.1\Todo.Domain.dll
+C:\repos\TodoList\Todo.Domain.Tests\bin\Debug\netcoreapp3.1\Todo.Domain.pdb
