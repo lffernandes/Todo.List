@@ -1,3 +1,4 @@
+using System;
 using Todo.Domain.Entities;
 using Todo.Domain.Repositories;
 
@@ -9,6 +10,11 @@ namespace Todo.Domain.Tests.Repositories
         public void Create(TodoList todo)
         {
 
+        }
+
+        public TodoList GetById(Guid id, string user)
+        {
+            return new TodoList("Titulo Aqui", "lzfrnds", DateTime.Now);
         }
 
         public void MarkDisable(TodoList todo)
@@ -25,6 +31,7 @@ namespace Todo.Domain.Tests.Repositories
         {
 
         }
+
     }
 
 }

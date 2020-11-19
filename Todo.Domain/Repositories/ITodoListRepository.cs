@@ -10,5 +10,7 @@ namespace Todo.Domain.Repositories
         void Update(TodoList todo);
         void MarkDisable(TodoList todo);
         void MarkEnable(TodoList todo);
+
+        TodoList GetById(Guid id, string user);
     }
 }
