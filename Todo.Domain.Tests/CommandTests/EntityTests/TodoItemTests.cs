@@ -15,5 +15,11 @@ namespace Todo.Domain.Tests.EntityTests
         {
             Assert.AreNotEqual(_validTodo.Status, 5);
         }
+        [TestMethod]
+        public void Dado_um_titulo_invalido_o_mesmo_nao_pode_ser_concluido()
+        {
+            _validTodo.UpdateTitle("teste");
+            Assert.IsTrue(_validTodo.Title.Length > 3);
+        }
     }
 }
