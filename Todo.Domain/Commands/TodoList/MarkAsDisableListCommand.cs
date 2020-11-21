@@ -6,15 +6,14 @@ using Todo.Domain.Helpers;
 
 namespace Todo.Domain.Commands
 {
-    public class MarkTodoListAsEnableCommand : Notifiable, ICommand
+    public class MarkAsDisableListCommand : Notifiable, ICommand
     {
-        public MarkTodoListAsEnableCommand() { }
+        public MarkAsDisableListCommand() { }
 
-        public MarkTodoListAsEnableCommand(Guid id, string user)
+        public MarkAsDisableListCommand(Guid id, string user)
         {
             Id = id;
             User = user;
-
         }
 
         public Guid Id { get; set; }

@@ -2,14 +2,15 @@ using System;
 using Flunt.Notifications;
 using Flunt.Validations;
 using Todo.Domain.Commands.Contracts;
+using Todo.Domain.Helpers;
 
 namespace Todo.Domain.Commands
 {
-    public class MarkTodoAsDoneCommand : Notifiable, ICommand
+    public class UpdateStatusItemCommand : Notifiable, ICommand
     {
-        public MarkTodoAsDoneCommand() { }
+        public UpdateStatusItemCommand() { }
 
-        public MarkTodoAsDoneCommand(Guid id, string user)
+        public UpdateStatusItemCommand(Guid id, string user)
         {
             Id = id;
             User = user;
@@ -18,6 +19,8 @@ namespace Todo.Domain.Commands
         public Guid Id { get; set; }
 
         public string User { get; set; }
+
+        public StatusItem Status { get; set; }
 
         public void Validate()
         {

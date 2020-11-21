@@ -10,7 +10,9 @@ namespace Todo.Domain.Handlers
     public class TodoListHandler :
         Notifiable,
         IHandler<CreateTodoListCommand>,
-        IHandler<UpdateTodoListCommand>
+        IHandler<UpdateTodoListCommand>,
+        IHandler<MarkAsEnableListCommand>,
+        IHandler<MarkAsDisableListCommand>
 
     {
         private readonly ITodoListRepository _repository;
@@ -43,6 +45,34 @@ namespace Todo.Domain.Handlers
             var todo = _repository.GetById(command.Id, command.User);
 
             todo.UpdateTitle(command.Title);
+
+            _repository.Update(todo);
+
+            return new GenericCommandResult(true, "Tarefa salva", todo);
+        }
+        public ICommandResult Handle(MarkAsEnableListCommand command)
+        {
+            command.Validate();
+            if (command.Invalid)
+                return new GenericCommandResult(false, "Ops, parece que sua tarefa está errada!", command.Notifications);
+
+            var todo = _repository.GetById(command.Id, command.User);
+
+            todo.MarkAsEnable();
+
+            _repository.Update(todo);
+
+            return new GenericCommandResult(true, "Tarefa salva", todo);
+        }
+        public ICommandResult Handle(MarkAsDisableListCommand command)
+        {
+            command.Validate();
+            if (command.Invalid)
+                return new GenericCommandResult(false, "Ops, parece que sua tarefa está errada!", command.Notifications);
+
+            var todo = _repository.GetById(command.Id, command.User);
+
+            todo.MarkAsDisable();
 
             _repository.Update(todo);
 
